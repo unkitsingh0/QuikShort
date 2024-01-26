@@ -47,7 +47,7 @@ let handelCreateLink = async (req, res) => {
       _id: generateShortId._id,
     });
   } catch (error) {
-    res.send(error.meesage);
+    res.json({ status: "fail", message: error.message });
   }
 };
 let handelGetAllLinks = async (req, res) => {
